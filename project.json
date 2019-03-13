@@ -1,5 +1,5 @@
 {
-  "name": "TripAdvisor",
+  "name": "ZomatoTraining",
   "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
@@ -7,11 +7,12 @@
     "UiPath.System.Activities": "[18.4.2]",
     "UiPath.Excel.Activities": "[2.5.1]",
     "UiPath.Mail.Activities": "[1.3.0]",
-    "UiPath.Cognitive.Activities": "[2.2.0]"
+    "UiPath.Cognitive.Activities": "[2.2.0]",
+    "Custom.Activities.VariableComparer": "[2.1.6]"
   },
   "schemaVersion": "3.2",
   "studioVersion": "18.4.4.0",
-  "projectVersion": "1.0.0.0",
+  "projectVersion": "1.0.7012.825",
   "runtimeOptions": {
     "autoDispose": false,
     "excludedLoggedData": [
@@ -23,5 +24,9 @@
   "libraryOptions": {
     "includeOriginalXaml": false,
     "privateWorkflows": []
+  },
+  "arguments": {
+    "input": [],
+    "output": []
   }
 }
