@@ -69,7 +69,7 @@
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke OpenZomato workflow" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="src\OpenZomato.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="ui:Browser" x:Key="out_Browser">[browser_Zomato]</OutArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_ApplicationUrl">https://www.zomato.com</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_ApplicationUrl">https://www.zomato.com/melbourne</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke SearchForRestaurant workflow" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="src\SearchForRestaurant.xaml">
@@ -95,7 +95,7 @@
         <InOutArgument x:TypeArguments="sd:DataTable" x:Key="inout_dt_reviews">[dt_Reviews]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <sads:DebugSymbol.Symbol>d1VDOlxVc2Vyc1xhbmRyZWkuYmFyYnVcRG9jdW1lbnRzXHVpcGF0aFx0cmFpbmluZ1xhY2FkZW15IGxpdGVcWm9tYXRvVHJhaW5pbmdcTWFpbi54YW1sFEADYw4CAQFFBUodAgEWSwVQHQIBEVEFVR0CAQ1WBVwdAgEGXQVhHQIBAkdHR1cCARlISkhgAgEYRbcBRcwBAgEXTkZOVAIBFU1FTVUCARNLwAFL3gECARJTRVNVAgEPUbkBUdABAgEOWURZRQIBDFpLWlcCAQpYRVhVAgEIVroBVtIBAgEHX1BfXAIBBF3BAV3gAQIBAw==</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d1VDOlxVc2Vyc1xhbmRyZWkuYmFyYnVcRG9jdW1lbnRzXHVpcGF0aFx0cmFpbmluZ1xhY2FkZW15IGxpdGVcWm9tYXRvVHJhaW5pbmdcTWFpbi54YW1sFEADYw4CAQFFBUodAgEWSwVQHQIBEVEFVR0CAQ1WBVwdAgEGXQVhHQIBAkdHR1cCARlISkhqAgEYRbcBRcwBAgEXTkZOVAIBFU1FTVUCARNLwAFL3gECARJTRVNVAgEPUbkBUdABAgEOWURZRQIBDFpLWlcCAQpYRVhVAgEIVroBVtIBAgEHX1BfXAIBBF3BAV3gAQIBAw==</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
