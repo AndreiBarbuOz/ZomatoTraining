@@ -65,10 +65,9 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Purpose:&#xA;Receive a datatable of reviews on column 0. &#xA;Modify the datatable by adding 2 more columns and populate those columns with Polarity and Magnitude of sentiment analysis&#xA;&#xA;Arguments:&#xA;out_Browser(Out): The browser window opened, containing the landing page of Zomato&#xD;&#xA;in_ApplicationUrl(In): The url of the landing page of Zomato&#xA;&#xA;Assumptions:&#xD;&#xA;The application is not already open&#xD;&#xA;Chrome is present on the robot machine&#xA;&#xA;Throws:&#xA;ApplicationException(FailedToLoadLandingPage): If the landing page cannot be found/the landing page has changed&#xD;&#xA;&#xA;Output:" DisplayName="OpenZomato" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Purpose:&#xA;Open a Chrome browser to the Zomato website. &#xD;&#xA;&#xA;Arguments:&#xA;out_Browser(Out): The browser window opened, containing the landing page of Zomato&#xA;in_ApplicationUrl(In): The url of the landing page of Zomato&#xA;&#xA;Assumptions:&#xA;The application is not already open&#xA;Chrome is present on the robot machine&#xA;&#xA;Throws:&#xA;ApplicationException(FailedToLoadLandingPage): If the landing page cannot be found/the landing page has changed&#xA;&#xA;Output:" DisplayName="OpenZomato" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <ui:OpenBrowser BrowserType="Chrome" DisplayName="Open Browser" Hidden="False" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" UiBrowser="[out_Browser]" Url="[in_ApplicationUrl]">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
@@ -102,7 +101,7 @@
         </ActivityAction>
       </ui:OpenBrowser.Body>
     </ui:OpenBrowser>
-    <sads:DebugSymbol.Symbol>d19DOlxVc2Vyc1xhbmRyZWkuYmFyYnVcRG9jdW1lbnRzXHVpcGF0aFx0cmFpbmluZ1xhY2FkZW15IGxpdGVcWm9tYXRvVHJhaW5pbmdcc3JjXE9wZW5ab21hdG8ueGFtbA5HA2oOAgEBSAVoFgIBAkiwAUi/AQIBD0jEAUjZAQIBDU4LZRYCAQNPDWQYAgEEURFVKgIBCl0VYCACAQVTjwFTwgECAQxTzQFT1AECAQteF17KAQIBCF8XX5YBAgEGXoUBXscBAgEJXyhfaQIBBw==</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d1VDOlxVc2Vyc1xhbmRyZWkuYmFyYnVcRG9jdW1lbnRzXHVpcGF0aFxkZW1vXHpvbWF0b1xab21hdG9UcmFpbmluZ1xzcmNcT3BlblpvbWF0by54YW1sDkYDaQ4CAQFHBWcWAgECR7ABR78BAgEPR8QBR9kBAgENTQtkFgIBA04NYxgCAQRQEVQqAgEKXBVfIAIBBVKPAVLCAQIBDFLNAVLUAQIBC10XXcoBAgEIXhdelgECAQZdhQFdxwECAQleKF5pAgEH</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -133,7 +132,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="OpenBrowser_1" sap:VirtualizedContainerService.HintSize="450,746" />
-      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="472,1198.66666666667">
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="472,1165.33333333333">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -141,7 +140,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="OpenZomato_1" sap:VirtualizedContainerService.HintSize="512,1278.66666666667" />
+      <sap2010:ViewStateData Id="OpenZomato_1" sap:VirtualizedContainerService.HintSize="512,1245.33333333333" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>

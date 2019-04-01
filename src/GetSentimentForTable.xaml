@@ -66,10 +66,9 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Purpose:&#xA;Receive a datatable of reviews on column 0. &#xA;Modify the datatable by adding 2 more columns and populate those columns with Polarity and Magnitude of sentiment analysis&#xA;&#xA;Arguments:&#xA;inout_dt_reviews(In/Out): DataTable containing the reviews; should contain at least one column named &quot;reviews&quot;&#xA;&#xA;Assumptions:&#xA;&#xA;Throws:&#xA;&#xA;Output:&#xA;" DisplayName="GetSentimentForTable" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Purpose:&#xA;Receive a datatable containing one column of string, each row containing one review&#xA;Modify the datatable by adding 2 more columns and populate those columns with Polarity and Magnitude of sentiment analysis, according to the Google sentiment analysis API&#xA;&#xA;Arguments:&#xA;inout_dt_reviews(In/Out): DataTable containing the reviews; should contain at least one column named &quot;reviews&quot;&#xA;&#xA;Assumptions:&#xA;&#xA;Throws:&#xA;&#xA;Output:&#xA;" DisplayName="GetSentimentForTable" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_GcpApiKey" />
       <Variable x:TypeArguments="x:Double" Name="dbl_Polarity" />
@@ -110,7 +109,7 @@
         </ActivityAction>
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
-    <sads:DebugSymbol.Symbol>d2lDOlxVc2Vyc1xhbmRyZWkuYmFyYnVcRG9jdW1lbnRzXHVpcGF0aFx0cmFpbmluZ1xhY2FkZW15IGxpdGVcWm9tYXRvVHJhaW5pbmdcc3JjXEdldFNlbnRpbWVudEZvclRhYmxlLnhhbWwYSANyDgIBAU4FUhgCAR5TBVOuAgIBGlQFVK0CAgEWVQVwFQIBAlAxUEACASBONk5HAgEfU5ABU5sBAgEdU6YBU7oBAgEbVJABVJoBAgEZVKUBVLkBAgEXVTZVSgIBFFsLbRYCAQNcDVzjAgIBDF0NZBYCAQhlDWwWAgEEXIUCXJYCAgESXLYCXOACAgERXKACXLACAgEPXOkBXPoBAgENYjhiRwIBCl85X1ACAQlqOGpGAgEGZzlnTwIBBQ==</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d19DOlxVc2Vyc1xhbmRyZWkuYmFyYnVcRG9jdW1lbnRzXHVpcGF0aFxkZW1vXHpvbWF0b1xab21hdG9UcmFpbmluZ1xzcmNcR2V0U2VudGltZW50Rm9yVGFibGUueGFtbBhHA3EOAgEBTQVRGAIBHlIFUq4CAgEaUwVTrQICARZUBW8VAgECTzFPQAIBIE02TUcCAR9SkAFSmwECAR1SpgFSugECARtTkAFTmgECARlTpQFTuQECARdUNlRKAgEUWgtsFgIBA1sNW+MCAgEMXA1jFgIBCGQNaxYCAQRbhQJblgICARJbtgJb4AICARFboAJbsAICAQ9b6QFb+gECAQ1hOGFHAgEKXjleUAIBCWk4aUYCAQZmOWZPAgEF</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -128,7 +127,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="ForEachRow_1" sap:VirtualizedContainerService.HintSize="366.666666666667,542.666666666667" />
-      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="388.666666666667,1114.66666666667">
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="388.666666666667,1148">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -136,7 +135,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="GetSentimentForTable_1" sap:VirtualizedContainerService.HintSize="428.666666666667,1234.66666666667" />
+      <sap2010:ViewStateData Id="GetSentimentForTable_1" sap:VirtualizedContainerService.HintSize="428.666666666667,1228" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>

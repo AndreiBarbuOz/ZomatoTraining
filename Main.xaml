@@ -95,7 +95,14 @@
         <InOutArgument x:TypeArguments="sd:DataTable" x:Key="inout_dt_reviews">[dt_Reviews]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <sads:DebugSymbol.Symbol>d1VDOlxVc2Vyc1xhbmRyZWkuYmFyYnVcRG9jdW1lbnRzXHVpcGF0aFx0cmFpbmluZ1xhY2FkZW15IGxpdGVcWm9tYXRvVHJhaW5pbmdcTWFpbi54YW1sFEADYw4CAQFFBUodAgEWSwVQHQIBEVEFVR0CAQ1WBVwdAgEGXQVhHQIBAkdHR1cCARlISkhqAgEYRbcBRcwBAgEXTkZOVAIBFU1FTVUCARNLwAFL3gECARJTRVNVAgEPUbkBUdABAgEOWURZRQIBDFpLWlcCAQpYRVhVAgEIVroBVtIBAgEHX1BfXAIBBF3BAV3gAQIBAw==</sads:DebugSymbol.Symbol>
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke SaveReviews workflow" UnSafe="False" WorkflowFileName="src\SaveReviews.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_StrOutputPath">reviews.csv</InArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DtReviews">[dt_Reviews]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap2010:WorkflowViewState.IdRef>InvokeWorkflowFile_7</sap2010:WorkflowViewState.IdRef>
+    </ui:InvokeWorkflowFile>
+    <sads:DebugSymbol.Symbol>d0tDOlxVc2Vyc1xhbmRyZWkuYmFyYnVcRG9jdW1lbnRzXHVpcGF0aFxkZW1vXHpvbWF0b1xab21hdG9UcmFpbmluZ1xNYWluLnhhbWwYQANqDgIBAUUFSh0CARtLBVAdAgEWUQVVHQIBElYFXB0CAQtdBWEdAgEHYgVoHQIBAkdHR1cCAR5ISkhqAgEdRbcBRcwBAgEcTkZOVAIBGk1FTVUCARhLwAFL3gECARdTRVNVAgEUUbkBUdABAgETWURZRQIBEVpLWlcCAQ9YRVhVAgENVroBVtIBAgEMX1BfXAIBCV3BAV3gAQIBCGVJZVUCAQVkSWRUAgEEYoEBYpcBAgED</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -104,14 +111,15 @@
       <sap2010:ViewStateData Id="InvokeWorkflowFile_4" sap:VirtualizedContainerService.HintSize="314,86.6666666666667" />
       <sap2010:ViewStateData Id="InvokeWorkflowFile_5" sap:VirtualizedContainerService.HintSize="314,86.6666666666667" />
       <sap2010:ViewStateData Id="InvokeWorkflowFile_6" sap:VirtualizedContainerService.HintSize="314,86.6666666666667" />
-      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="336,717.333333333333">
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_7" sap:VirtualizedContainerService.HintSize="314,86.6666666666667" />
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="336,844">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="376,837.333333333333" />
+      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="376,924" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
